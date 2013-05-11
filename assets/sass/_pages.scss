@@ -1,0 +1,354 @@
+@import "compass/css3";
+
+/* general settings */
+
+*{
+	outline: none;
+	
+	::-webkit-input-placeholder { color:#fff; font-size:14px; font-family: $bodyFontFamily; display: block; text-align: center; }
+	::-moz-placeholder { color:#fff; font-size:14px; font-family: $bodyFontFamily; display: block; text-align: center; } /* firefox 19+ */
+	:-ms-input-placeholder { color:#fff; font-size:14px; font-family: $bodyFontFamily; display: block; text-align: center; } /* ie */
+	input:-moz-placeholder { color:#fff; font-size:14px; font-family: $bodyFontFamily; display: block; text-align: center; }
+
+	/* Let's get this party started */
+	::-webkit-scrollbar {
+	    width: 8px;
+	}
+	 
+	/* Track */
+	::-webkit-scrollbar-track {
+	    -webkit-box-shadow: inset 0 0 6px rgba(250,250,250,0.3); 
+	    -webkit-border-radius: 10px;
+	    border-radius: 10px;
+	}
+	 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	    -webkit-border-radius: 10px;
+	    border-radius: 10px;
+	    background: rgba(255,255,255,0.8); 
+	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+	}
+	::-webkit-scrollbar-thumb:window-inactive {
+		background: rgba(255,255,255,0.4); 
+	}
+
+}
+
+
+html,body{
+	height     : 100%;
+	width      : 100%;
+	margin     : 0;
+	padding    : 0;
+	background : $bgcolor;
+	color      : #959595;
+	font       : normal 16px/150% $bodyFontFamily;
+	letter-spacing: 1px;
+}
+
+body{overflow-y : scroll;}
+
+p{
+	font       : normal 16px/150% $bodyFontFamily;
+	letter-spacing: 1px;	
+	
+	span{color: #636363;}
+}
+
+#container{
+	width   : $rowWidth;
+	margin  : 0 auto;
+	display : block;
+}
+
+.wrapper{
+	width: 100%;
+	height: 100%;
+	float: left;
+	background : url(../images/line.png) repeat-y 370px 0;
+	padding-bottom: 100px;
+}
+
+.row{margin-top:40px}
+
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+.text-center{text-align: center;}
+
+.left-icon{
+	background: url(../images/icon-left-poss.png) no-repeat 39% 0%;
+}
+
+.right-icon{
+	background: url(../images/icon-right-poss.png) no-repeat 37.7% 0%;
+}
+
+.top-icon{
+	background-image : url(../images/icon-center-poss.png), url(../images/arrow.png);
+	background-position: 38.5% 0, 38.5% 100%;
+	background-repeat: no-repeat;
+	background-color: $bgcolor;
+	padding: 20px 0 10px;
+}
+
+#facebook, #twitter{
+	display: block;
+}
+
+.time-text, .kkcountdown-box{
+	display: block;
+	float:left;
+
+	span{
+		width: 100%;
+		display: block;
+		clear: both;
+		
+		&.kkc-dni, &.day{color: #de6961;}
+		&.kkc-godz, &.hour{color: #7ec7d6;}
+		&.kkc-min, &.minutes{color: #a3d183;}
+		&.kkc-sec, &.second{color: #b8937d;}
+	}
+}
+
+.time-text{
+	width: 75%;
+	span{
+		font: normal 10px/150% $nexaLight;
+		height: 46px;
+		text-align: right;
+	}
+}
+
+.kkcountdown-box{
+	width: 25%;
+	span{
+		font: normal 46px/100% $nexaBold;
+		height: 46px;
+		text-align: right;	
+		&.kkc-dni-text, &.kkc-godz-text, &.kkc-min-text, &.kkc-sec-text{
+			display: none;
+		}
+	}
+}
+
+.user{
+	margin-bottom: 10px;
+}
+
+
+// ACORDION STYLE
+
+.ac-container{
+	width : 380px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.ac-container div{
+	margin-bottom: 5px;
+	
+	&.qoute{
+		background: #7ec7d6;
+		.ac-container label:hover{
+			background: #79bbc9;	
+		}
+	}
+	&.photo{
+		background: #de6962;
+		.ac-container label:hover{
+			background: #cb6761;	
+		}
+	}
+	&.video{
+		background: #a3d183;
+		.ac-container label:hover{
+			background: #94cd6c;	
+		}
+	}
+}
+
+.ac-container label{
+	font-family : $nexaBold;
+	position    : relative;
+	z-index     : 20;
+	display     : block;
+	height      : 30px;
+	cursor      : pointer;
+	color       : #fff;
+	font-size   : 15px;
+	line-height : 30px;
+	text-align  : center;
+	margin      : 0;
+	
+	&.error{
+		position    : absolute;
+		color       : #7b221d;
+		font-size   : 7px;
+		bottom      : -15px;
+		font-family : arial;
+		display     : block;
+		font-style  : italic;
+	}
+}
+
+.ac-container em{
+	font-size  : 10px;
+	text-align : center;
+	display    : block;
+	color      : #fff;
+}
+
+.ac-container input:checked + label,
+.ac-container input:checked + label:hover{
+	color: #fff;
+}
+
+.ac-container label:hover:after,
+.ac-container input:checked + label:hover:after{
+	content: '';
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	right: 13px;
+	top: 7px;
+}
+.ac-container input:checked + label:hover:after{
+	background-image: url(../images/arrow_up.png);
+}
+
+.ac-container article{
+	padding: 0 30px;
+	display: none;
+	
+	textarea{
+		border: none;
+		resize: none;
+		background: url(../images/border.png) repeat 0 0;
+		color: #fff;
+		height: 185px;
+		font: normal 16px/30px $bodyFontFamily;
+		letter-spacing: 1px;
+		-webkit-appearance:none;
+	    -moz-appearance:none;
+	    appearance:none;
+		@include border-radius(0);
+		@include box-shadow(rgba(0,0,0,0) 0 0);
+		
+		&.error:focus {
+			background: url(../images/border.png) repeat 0 0;
+			@include box-shadow(rgba(255,255,255,0.7) 0px 0px 10px);
+		}
+		
+	}
+
+	select{
+		-webkit-appearance:none;
+	    -moz-appearance:none;
+	    appearance:none;
+		border: none;
+		color: #fff;
+		font: normal 16px/30px $bodyFontFamily;
+		letter-spacing: 1px;
+		background: url(../images/arrow-down.png) transparent no-repeat right center;
+		
+
+		option{
+			color: #000;
+		}
+	}
+
+	input[type="submit"]{
+		background : #48a3b6;
+		color      : #fff;
+		padding    : 10px 20px;
+		font       : normal 15px/150% $bodyFontFamily;
+		border     : none;
+		letter-spacing: 1px;
+		float: right;
+		cursor: pointer;
+	}
+
+	input[type="text"]{
+		border: none;
+		color: #fff;
+		height: 30px;
+		font: normal 16px/30px $bodyFontFamily;
+		letter-spacing: 1px;
+		-webkit-appearance:none;
+	    -moz-appearance:none;
+	    appearance:none;
+		@include border-radius(0);
+		@include box-shadow(rgba(0,0,0,0) 0 0);
+	}
+
+	div.custom_file_upload {
+		width: 135px;
+		height: 25px;
+		margin: 15px auto;
+	}
+
+
+	div.file_upload {
+		width: 135px;
+		height: 35px;
+		line-height: 35px;
+		background: #c12d24;
+		display: inline;
+		position: absolute;
+		overflow: hidden;
+		cursor: pointer;
+		color: #fff;
+		text-align: center;
+		
+		label.error{
+			bottom: 9px;
+			color: #fff;
+			width: 100%;
+			height: 10px;
+		}
+	}
+
+	div.file_upload:before {
+		content: 'browse photo';
+		position: absolute;
+		left: 0; right: 0;
+		text-align: center;
+		cursor: pointer;
+		line-height: 35px;
+	}
+
+	div.file_upload input {
+		position: relative;
+		height: 35px;
+		line-height: 35px;
+		width: 135px;
+		display: inline;
+		cursor: pointer;
+		opacity: 0;
+	}
+}
+
+.ac-container .photo{
+	article{
+		input[type="text"]{
+			background: url(../images/red-border.png) repeat-x bottom center;
+		}
+
+		input[type="submit"]{
+			background: #c12d24;
+		}
+	}
+}
+.ac-container .video{
+	article{
+		input[type="text"]{
+			background: url(../images/green-border.png) repeat-x bottom center;
+		}
+
+		input[type="submit"]{
+			background: #6ca247;
+		}
+	}
+}
