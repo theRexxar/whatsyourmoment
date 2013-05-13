@@ -27,6 +27,10 @@
 				</div>
 			</form>	
 		</article>
+		<section class="thanks">
+			<span>Thank you very much for sharing your best moment in life.</span>
+			<a href="#back" class="button-back">back</a>
+		</section>
 	</div>
 	
 	<!-- submit photo -->
@@ -64,6 +68,10 @@
 				</div>
 			</form>	
 		</article>
+		<section class="thanks">
+			<span>Thank you very much for sharing your best moment in life.</span>
+			<a href="#back" class="button-back">back</a>
+		</section>
 	</div>
 	
 	<!-- submit video -->
@@ -93,6 +101,10 @@
 				</div>
 			</form>	
 		</article>
+		<section class="thanks">
+			<span>Thank you very much for sharing your best moment in life.</span>
+			<a href="#back" class="button-back">back</a>
+		</section>
 	</div>
 
 </section>

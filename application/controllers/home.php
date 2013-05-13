@@ -135,16 +135,16 @@ class Home extends CI_Controller {
 			$return['success'] = 0;
 			$return['error'] = $error;
 			
-			header('Location: '.base_url().'thankyou');  //redirect to the home page
+			//header('Location: '.base_url().'thankyou');  //redirect to the home page
 		}
 		else //kalo gak ada error alias form submit sukses
         { 
 			$return['success'] = 1;
 			
-			header('Location: '.base_url().'thankyou');  //redirect to the home page
+			//header('Location: '.base_url().'thankyou');  //redirect to the home page
 		}
 		
-		//echo json_encode($return);
+		echo json_encode($return);
 	}
 
 	function submit_photo(){
@@ -255,15 +255,15 @@ class Home extends CI_Controller {
         { 
 			$return['success'] = 0;
 			$return['error'] = $error;
-			header('Location: '.base_url().'thankyou');  //redirect to the home page
+			//header('Location: '.base_url().'thankyou');  //redirect to the home page
 		}
 		else //kalo gak ada error alias form submit sukses
         { 
 			$return['success'] = 1;
-			header('Location: '.base_url().'thankyou');  //redirect to the home page
+			//header('Location: '.base_url().'thankyou');  //redirect to the home page
 		}
 		
-		//echo json_encode($return);
+		echo json_encode($return);
 	}
 
 	function submit_video(){
@@ -313,15 +313,15 @@ class Home extends CI_Controller {
         { 
 			$return['success'] = 0;
 			$return['error'] = $error;
-			header('Location: '.base_url().'thankyou');  //redirect to the home page
+			//header('Location: '.base_url().'thankyou');  //redirect to the home page
 		}
 		else //kalo gak ada error alias form submit sukses
         { 
 			$return['success'] = 1;
-			header('Location: '.base_url().'thankyou');  //redirect to the home page
+			//header('Location: '.base_url().'thankyou');  //redirect to the home page
 		}
 		
-		//echo json_encode($return);
+		echo json_encode($return);
 	}
 	
 }

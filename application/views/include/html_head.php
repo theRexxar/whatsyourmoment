@@ -11,7 +11,10 @@
   <meta name="description" content="">
   <meta name="author" content="whatsyourmoment.me">
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="<?php echo base_url();?>assets/images/favicon.ico" type="image/x-icon">
 
   <!-- CSS concatenated and minified via ant build script-->
   <link rel="stylesheet" href="<?php echo base_url().'assets/'?>stylesheets/app.css">

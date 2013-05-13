@@ -26,7 +26,7 @@ $(function(){
     var form_validation = function(param){
         $(param).validate({
             rules: {
-                qoute : {
+                qoutes : {
                     required: true,
                     maxlength: 160
                 },
@@ -47,7 +47,7 @@ $(function(){
                 }
             },
             messages: {
-                qoute : {
+                qoutes : {
                     required: "Please submit your Qoute",
                     maxlength: "Maximum 160 character"
                 },
@@ -70,9 +70,56 @@ $(function(){
         });
     };
 
-    // $('#submit-quote').ajaxForm(function() { 
-        
-    // }); 
+    $('#submit-quote').ajaxForm({ 
+        beforeSubmit: function(arr, $form, options) { 
+            console.log('before');
+            $('input[type="submit"]').attr('disabled','disabled');
+        },
+        success : function() { 
+            $(".qoute").children(".thanks").fadeIn();
+            $(".button-back").click(function(){
+                $(this).parents(".thanks").fadeOut();
+                $('input[type="submit"]').removeAttr('disabled');
+                $('#submit-quote')[0].reset();
+            })
+        } 
+    }); 
+
+    $('#submit-url').ajaxForm({ 
+        beforeSubmit: function(arr, $form, options) { 
+            $('input[type="submit"]').attr('disabled','disabled');
+        },
+        success : function() { 
+            $(".video").children(".thanks").fadeIn();
+            $(".button-back").click(function(){
+                $(this).parents(".thanks").fadeOut();
+                $('input[type="submit"]').removeAttr('disabled');
+                $('#submit-url')[0].reset();
+            })
+        } 
+    }); 
+
+     $('#submit-photo').ajaxForm({ 
+        beforeSubmit: function(arr, $form, options) { 
+            $('input[type="submit"]').attr('disabled','disabled');
+        },
+        success : function() { 
+            $(".photo").children(".thanks").fadeIn();
+            $(".button-back").click(function(){
+                $(this).parents(".thanks").fadeOut();
+                $('input[type="submit"]').removeAttr('disabled');
+                $('#submit-photo')[0].reset();
+            })
+        } 
+    }); 
+
+    $(".category-url").bind('change', function () {
+        var url = $(this).val(); // get selected value
+        if (url) { // require a URL
+          window.location = BASE_URL + 'admin/' +url; // redirect
+        }
+        return false;
+    });
     
 
 });

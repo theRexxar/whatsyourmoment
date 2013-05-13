@@ -43,14 +43,14 @@ html,body{
 	padding    : 0;
 	background : $bgcolor;
 	color      : #959595;
-	font       : normal 16px/150% $bodyFontFamily;
+	font       : normal 14px/150% $bodyFontFamily;
 	letter-spacing: 1px;
 }
 
 body{overflow-y : scroll;}
 
 p{
-	font       : normal 16px/150% $bodyFontFamily;
+	font       : normal 14px/150% $bodyFontFamily;
 	letter-spacing: 1px;	
 	
 	span{color: #636363;}
@@ -144,15 +144,48 @@ p{
 	width : 380px;
 	margin: 0 auto;
 	text-align: left;
+
+	.thanks{
+		display     : none;
+		padding-top : 35%;
+		text-align  : center;
+		position    : absolute;
+		top         : 0;
+		left        : 0;
+		width       : 100%;
+		height      : 100%;
+		color       : #fff;
+		font        : normal 15px/130% $nexaBold;
+		z-index     : 30;
+
+		span{
+			margin-bottom: 20px;
+			display: block;
+			float: left;
+			clear: both;
+		}
+		
+		a{
+			color: #fff;
+			margin-top: 20px;
+			padding: 10px 20px;
+		}
+	}
 }
 
 .ac-container div{
 	margin-bottom: 5px;
-	
+	position: relative;
+
 	&.qoute{
 		background: #7ec7d6;
 		.ac-container label:hover{
 			background: #79bbc9;	
+		}
+
+		.thanks{
+			background: #7ec7d6;
+			a{background: #48a3b6}
 		}
 	}
 	&.photo{
@@ -160,11 +193,23 @@ p{
 		.ac-container label:hover{
 			background: #cb6761;	
 		}
+
+		.thanks{
+			background: #de6962;
+			padding-top: 22%;
+			a{background: #c12d24}
+		}
 	}
 	&.video{
 		background: #a3d183;
 		.ac-container label:hover{
 			background: #94cd6c;	
+		}
+
+		.thanks{
+			background: #a3d183;
+			padding-top: 9%;
+			a{background: #6ca247}
 		}
 	}
 }
@@ -228,7 +273,7 @@ p{
 		background: url(../images/border.png) repeat 0 0;
 		color: #fff;
 		height: 185px;
-		font: normal 16px/30px $bodyFontFamily;
+		font: normal 14px/30px $bodyFontFamily;
 		letter-spacing: 1px;
 		-webkit-appearance:none;
 	    -moz-appearance:none;
@@ -249,13 +294,15 @@ p{
 	    appearance:none;
 		border: none;
 		color: #fff;
-		font: normal 16px/30px $bodyFontFamily;
+		font: normal 14px/30px $bodyFontFamily;
 		letter-spacing: 1px;
 		background: url(../images/arrow-down.png) transparent no-repeat right center;
 		
 
 		option{
 			color: #000;
+			font: normal 14px/30px $bodyFontFamily;
+			background: #fff;
 		}
 	}
 
@@ -274,7 +321,7 @@ p{
 		border: none;
 		color: #fff;
 		height: 30px;
-		font: normal 16px/30px $bodyFontFamily;
+		font: normal 14px/30px $bodyFontFamily;
 		letter-spacing: 1px;
 		-webkit-appearance:none;
 	    -moz-appearance:none;
