@@ -53,8 +53,7 @@
       <p class="text-center">Best Moment in Life is a fun-seeking website that compiles a true expression of <br> <span>life from love, friendship, hobby, trends, work, family, and many more.</span></p>
     </article>
     <section class="user">
-      <?php //var_dump($this->session->userdata("ses_user")); ?>
-      <?php if($this->session->userdata("ses_user")) :  ?>
+      <?php //if($this->session->userdata("ses_user")) :  ?>
         <p class="text-center">Share your own best moment in life through <span>quote, photo, or video</span> or... all three of it! The quote, photo, and video could be yours, or could be from others that you know or don't</p>
           
           <!-- <img src="<?php echo 'https://graph.facebook.com/'. $ses_user['id'] .'/picture'?>"/>
@@ -62,9 +61,9 @@
           <a href="<?php echo $this->session->userdata('logout')?>">Logout</a> -->
 
           <?php include("include/user_form.php"); ?>
-      <?php  else : ?>
+      <?php /*  else : ?>
           <a href="#" id="facebook" class="text-center"><img src="<?php echo base_url(); ?>assets/images/button-fb-connect.png" alt="facebook connect"></a>
-      <?php endif; ?>
+      <?php endif; */ ?>
     </section>
   </div>
 </div>

@@ -1,3 +1,5 @@
+preload     = "<section class='preload'><div class='meter'> <span style='width: 100%'></span>Loading..</div></section>";
+
 $(function(){
 	$(".count-down").kkcountdown({
     	dayText		: ' ',
@@ -15,16 +17,45 @@ $(function(){
     $(".ac-container label").toggle(function(){
         var _this = $(this);
         _this.siblings("article").slideDown(500);
-        form_validation(".validate-qoute");
-        form_validation(".validate-photo");
-        form_validation(".validate-url");
+        form_validation(".validate-qoute", ".qoute");
+        form_validation(".validate-photo", ".photo");
+        form_validation(".validate-url", ".video");
     }, function(){
         var _this = $(this);
         _this.siblings("article").slideUp(500);
     });
 
-    var form_validation = function(param){
+    var form_validation = function(param, target){
         $(param).validate({
+            submitHandler: function(form) {
+                $(form).ajaxSubmit({ 
+                    type: 'post',
+                    dataType: 'json',
+                    beforeSubmit: function(arr, $form, options) { 
+                        $(target).append(preload);
+                        $(param + 'input[type="submit"]').attr('disabled','disabled');
+                    },
+                    success : function(data) { 
+                        console.log(data.success)
+                        if(data.success == 1){
+                            $(target).find(".preload").fadeOut();
+                            setTimeout(function(){
+                                $(target).children(".thanks").fadeIn();
+                                $(target).find('.preload').remove();
+                                $(".button-back").click(function(){
+                                    $(this).parents(".thanks").fadeOut();
+                                    $('input[type="submit"]').removeAttr('disabled');
+                                    $('#submit-quote')[0].reset();
+                                });
+                            },200)
+                            
+                        }else{
+                            alert(data.error);
+                            $(".preload").fadeOut().remove();
+                        }
+                    } 
+                }); 
+            },
             rules: {
                 qoutes : {
                     required: true,
@@ -70,48 +101,48 @@ $(function(){
         });
     };
 
-    $('#submit-quote').ajaxForm({ 
-        beforeSubmit: function(arr, $form, options) { 
-            console.log('before');
-            $('input[type="submit"]').attr('disabled','disabled');
-        },
-        success : function() { 
-            $(".qoute").children(".thanks").fadeIn();
-            $(".button-back").click(function(){
-                $(this).parents(".thanks").fadeOut();
-                $('input[type="submit"]').removeAttr('disabled');
-                $('#submit-quote')[0].reset();
-            })
-        } 
-    }); 
+    // $('#submit-quote').ajaxForm({ 
+    //     beforeSubmit: function(arr, $form, options) { 
+    //         console.log('before');
+    //         $('input[type="submit"]').attr('disabled','disabled');
+    //     },
+    //     success : function() { 
+    //         $(".qoute").children(".thanks").fadeIn();
+    //         $(".button-back").click(function(){
+    //             $(this).parents(".thanks").fadeOut();
+    //             $('input[type="submit"]').removeAttr('disabled');
+    //             $('#submit-quote')[0].reset();
+    //         })
+    //     } 
+    // }); 
 
-    $('#submit-url').ajaxForm({ 
-        beforeSubmit: function(arr, $form, options) { 
-            $('input[type="submit"]').attr('disabled','disabled');
-        },
-        success : function() { 
-            $(".video").children(".thanks").fadeIn();
-            $(".button-back").click(function(){
-                $(this).parents(".thanks").fadeOut();
-                $('input[type="submit"]').removeAttr('disabled');
-                $('#submit-url')[0].reset();
-            })
-        } 
-    }); 
+    // $('#submit-url').ajaxForm({ 
+    //     beforeSubmit: function(arr, $form, options) { 
+    //         $('input[type="submit"]').attr('disabled','disabled');
+    //     },
+    //     success : function() { 
+    //         $(".video").children(".thanks").fadeIn();
+    //         $(".button-back").click(function(){
+    //             $(this).parents(".thanks").fadeOut();
+    //             $('input[type="submit"]').removeAttr('disabled');
+    //             $('#submit-url')[0].reset();
+    //         })
+    //     } 
+    // }); 
 
-     $('#submit-photo').ajaxForm({ 
-        beforeSubmit: function(arr, $form, options) { 
-            $('input[type="submit"]').attr('disabled','disabled');
-        },
-        success : function() { 
-            $(".photo").children(".thanks").fadeIn();
-            $(".button-back").click(function(){
-                $(this).parents(".thanks").fadeOut();
-                $('input[type="submit"]').removeAttr('disabled');
-                $('#submit-photo')[0].reset();
-            })
-        } 
-    }); 
+    //  $('#submit-photo').ajaxForm({ 
+    //     beforeSubmit: function(arr, $form, options) { 
+    //         $('input[type="submit"]').attr('disabled','disabled');
+    //     },
+    //     success : function() { 
+    //         $(".photo").children(".thanks").fadeIn();
+    //         $(".button-back").click(function(){
+    //             $(this).parents(".thanks").fadeOut();
+    //             $('input[type="submit"]').removeAttr('disabled');
+    //             $('#submit-photo')[0].reset();
+    //         })
+    //     } 
+    // }); 
 
     $(".category-url").bind('change', function () {
         var url = $(this).val(); // get selected value
