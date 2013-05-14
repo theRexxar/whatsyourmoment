@@ -101,6 +101,14 @@ $(function(){
         });
     };
 
+    $(".box-play").colorbox({
+        iframe:true, 
+        innerWidth:640, 
+        innerHeight:360,
+        fixed: true,
+        top: '10%'
+    });
+
     // $('#submit-quote').ajaxForm({ 
     //     beforeSubmit: function(arr, $form, options) { 
     //         console.log('before');

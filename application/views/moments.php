@@ -58,7 +58,7 @@
                 <!-- PHOTO -->
                 <?php if($value['photo'] != NULL) :?>
                   <img src="<?php echo base_url()."uploads/".$value['photo']?>" alt="<?php echo $value['caption']; ?>">
-                  <span><?php echo $value['name']; ?> <br> <?php echo $value['caption']; ?></span>  
+                  <span><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
                 <?php endif; ?>
 
                 <!-- VIDEO -->
@@ -69,10 +69,10 @@
                       parse_str($parsed_url['query'], $parsed_query_string);
                       $v = $parsed_query_string['v'];
 
-                      echo '<a href="http://www.youtube.com/embed/'. $v .'" class="box-play"> <img src="http://img.youtube.com/vi/'.$v.'/0.jpg"> <img src="'. base_url(). 'assets/images/play.png" alt="play" class="play"></a>';
+                      echo '<a href="http://www.youtube.com/embed/'. $v .'" class="box-play" title="'. $value['name']. '"> <img src="http://img.youtube.com/vi/'.$v.'/0.jpg"> <img src="'. base_url(). 'assets/images/play.png" alt="play" class="play"></a>';
                     }
                   ?>
-                  <span><?php echo $value['name']; ?></span>  
+                  <!-- <span><?php echo $value['name']; ?></span>   -->
                 <?php endif; ?>
 
               </li>
@@ -105,7 +105,7 @@
                 <!-- PHOTO -->
                 <?php if($value['photo'] != NULL) :?>
                   <img src="<?php echo base_url()."uploads/".$value['photo']?>" alt="<?php echo $value['caption']; ?>">
-                  <span><?php echo $value['name']; ?> <br> <?php echo $value['caption']; ?></span>  
+                  <span><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
                 <?php endif; ?>
 
                 <!-- VIDEO -->
@@ -116,10 +116,10 @@
                       parse_str($parsed_url['query'], $parsed_query_string);
                       $v = $parsed_query_string['v'];
 
-                      echo '<a href="http://www.youtube.com/embed/'. $v .'" class="box-play"> <img src="http://img.youtube.com/vi/'.$v.'/0.jpg"> <img src="'. base_url(). 'assets/images/play.png" alt="play" class="play"></a>';
+                      echo '<a href="http://www.youtube.com/embed/'. $v .'" class="box-play" title="'. $value['name']. '"> <img src="http://img.youtube.com/vi/'.$v.'/0.jpg"> <img src="'. base_url(). 'assets/images/play.png" alt="play" class="play"></a>';
                     }
                   ?>
-                  <span><?php echo $value['name']; ?></span>  
+                  <!-- <span><?php echo $value['name']; ?></span>   -->
                 <?php endif; ?>
 
               </li>
@@ -152,7 +152,7 @@
                 <!-- PHOTO -->
                 <?php if($value['photo'] != NULL) :?>
                   <img src="<?php echo base_url()."uploads/".$value['photo']?>" alt="<?php echo $value['caption']; ?>">
-                  <span><?php echo $value['name']; ?> <br> <?php echo $value['caption']; ?></span>  
+                  <span><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
                 <?php endif; ?>
 
                 <!-- VIDEO -->
@@ -163,10 +163,10 @@
                       parse_str($parsed_url['query'], $parsed_query_string);
                       $v = $parsed_query_string['v'];
 
-                      echo '<a href="http://www.youtube.com/embed/'. $v .'" class="box-play"> <img src="http://img.youtube.com/vi/'.$v.'/0.jpg"> <img src="'. base_url(). 'assets/images/play.png" alt="play" class="play"></a>';
+                      echo '<a href="http://www.youtube.com/embed/'. $v .'" class="box-play" title="'. $value['name']. '"> <img src="http://img.youtube.com/vi/'.$v.'/0.jpg"> <img src="'. base_url(). 'assets/images/play.png" alt="play" class="play"></a>';
                     }
                   ?>
-                  <span><?php echo $value['name']; ?></span>  
+                  <!-- <span><?php echo $value['name']; ?></span>   -->
                 <?php endif; ?>
 
               </li>
@@ -199,7 +199,7 @@
                 <!-- PHOTO -->
                 <?php if($value['photo'] != NULL) :?>
                   <img src="<?php echo base_url()."uploads/".$value['photo']?>" alt="<?php echo $value['caption']; ?>">
-                  <span><?php echo $value['name']; ?> <br> <?php echo $value['caption']; ?></span>  
+                  <span><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
                 <?php endif; ?>
 
                 <!-- VIDEO -->
@@ -210,10 +210,10 @@
                       parse_str($parsed_url['query'], $parsed_query_string);
                       $v = $parsed_query_string['v'];
 
-                      echo '<a href="http://www.youtube.com/embed/'. $v .'" class="box-play"> <img src="http://img.youtube.com/vi/'.$v.'/0.jpg"> <img src="'. base_url(). 'assets/images/play.png" alt="play" class="play"></a>';
+                      echo '<a href="http://www.youtube.com/embed/'. $v .'" class="box-play" title="'. $value['name']. '"> <img src="http://img.youtube.com/vi/'.$v.'/0.jpg"> <img src="'. base_url(). 'assets/images/play.png" alt="play" class="play"></a>';
                     }
                   ?>
-                  <span><?php echo $value['name']; ?></span>  
+                  <!-- <span><?php echo $value['name']; ?></span>   -->
                 <?php endif; ?>
 
               </li>
@@ -247,7 +247,7 @@
                 <!-- PHOTO -->
                 <?php if($value['photo'] != NULL) :?>
                   <img src="<?php echo base_url()."uploads/".$value['photo']?>" alt="<?php echo $value['caption']; ?>">
-                  <span><?php echo $value['name']; ?> <br> <?php echo $value['caption']; ?></span>  
+                  <span><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
                 <?php endif; ?>
 
                 <!-- VIDEO -->
@@ -258,10 +258,10 @@
                       parse_str($parsed_url['query'], $parsed_query_string);
                       $v = $parsed_query_string['v'];
 
-                      echo '<a href="http://www.youtube.com/embed/'. $v .'" class="box-play"> <img src="http://img.youtube.com/vi/'.$v.'/0.jpg"> <img src="'. base_url(). 'assets/images/play.png" alt="play" class="play"></a>';
+                      echo '<a href="http://www.youtube.com/embed/'. $v .'" class="box-play" title="'. $value['name']. '"> <img src="http://img.youtube.com/vi/'.$v.'/0.jpg"> <img src="'. base_url(). 'assets/images/play.png" alt="play" class="play"></a>';
                     }
                   ?>
-                  <span><?php echo $value['name']; ?></span>  
+                  <!-- <span><?php echo $value['name']; ?></span>   -->
                 <?php endif; ?>
 
               </li>
@@ -294,7 +294,7 @@
                 <!-- PHOTO -->
                 <?php if($value['photo'] != NULL) :?>
                   <img src="<?php echo base_url()."uploads/".$value['photo']?>" alt="<?php echo $value['caption']; ?>">
-                  <span><?php echo $value['name']; ?> <br> <?php echo $value['caption']; ?></span>  
+                  <span><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
                 <?php endif; ?>
 
                 <!-- VIDEO -->
@@ -305,10 +305,10 @@
                       parse_str($parsed_url['query'], $parsed_query_string);
                       $v = $parsed_query_string['v'];
 
-                      echo '<a href="http://www.youtube.com/embed/'. $v .'" class="box-play"> <img src="http://img.youtube.com/vi/'.$v.'/0.jpg"> <img src="'. base_url(). 'assets/images/play.png" alt="play" class="play"></a>';
+                      echo '<a href="http://www.youtube.com/embed/'. $v .'" class="box-play" title="'. $value['name']. '"> <img src="http://img.youtube.com/vi/'.$v.'/0.jpg"> <img src="'. base_url(). 'assets/images/play.png" alt="play" class="play"></a>';
                     }
                   ?>
-                  <span><?php echo $value['name']; ?></span>  
+                  <!-- <span><?php echo $value['name']; ?></span>   -->
                 <?php endif; ?>
 
               </li>
@@ -352,10 +352,10 @@
                       parse_str($parsed_url['query'], $parsed_query_string);
                       $v = $parsed_query_string['v'];
 
-                      echo '<a href="http://www.youtube.com/embed/'. $v .'" class="box-play"> <img src="http://img.youtube.com/vi/'.$v.'/0.jpg"> <img src="'. base_url(). 'assets/images/play.png" alt="play" class="play"></a>';
+                      echo '<a href="http://www.youtube.com/embed/'. $v .'" class="box-play" title="'. $value['name']. '"> <img src="http://img.youtube.com/vi/'.$v.'/0.jpg"> <img src="'. base_url(). 'assets/images/play.png" alt="play" class="play"></a>';
                     }
                   ?>
-                  <span><?php echo $value['name']; ?></span>  
+                  <!-- <span><?php echo $value['name']; ?></span>   -->
                 <?php endif; ?>
 
               </li>

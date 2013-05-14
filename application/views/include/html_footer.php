@@ -3,6 +3,7 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/mylibs/kkcountdown.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/mylibs/jquery.validate.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/mylibs/jquery.form.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/mylibs/jquery.colorbox.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/script-all.js"></script>
 
 <script type="text/javascript">

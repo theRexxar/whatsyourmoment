@@ -83,7 +83,7 @@ p{
 
 	.left-icon{
 		margin-top: 0;
-		padding-top: 40px;
+		padding: 40px 0;
 		background : url(../images/icon-left-poss.png), url(../images/line-white.png);
 		background-position: 0px 50px, 5px 0;
 		background-repeat: no-repeat, repeat-y;
@@ -523,4 +523,83 @@ p{
 .nostripes > span > span, .nostripes > span:after {
         -webkit-animation: none;
         background-image: none;
+}
+
+
+// page moments
+.moments{
+	.block-grid li{
+		height: 200px;
+		background: #fff;
+		font: normal 22px/150% $nexaBold;
+		color: #7ec7d6;
+		position: relative;
+		padding: 20px;
+		overflow: hidden;
+
+		img{
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		span{
+			height: 100%;
+			width: 100%;
+			padding: 20px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: #de6962;
+			color: #fff;
+			@include opacity(0);
+			@include transition-property(all);
+			@include transition-duration(.5s);
+			@include transition-timing-function(ease-in-out);
+
+			em{
+				font: normal 14px/150% "titillium_websemibold", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;;
+			}
+		}
+
+		.box-play{
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			display: block;
+
+			.play{
+				position: absolute;
+				left: 50%;
+				margin-left: -37px;
+				top: 50%;
+				margin-top: -16px;	
+				@include opacity(1);
+				@include transition-property(all);
+				@include transition-duration(.5s);
+				@include transition-timing-function(ease-in-out);
+			}
+
+			&:hover{
+				.play{
+					@include opacity(.5);
+					@include transition-property(all);
+					@include transition-duration(.5s);
+					@include transition-timing-function(ease-in-out);	
+				}
+				
+			}
+		}
+
+		&:hover{
+			span{
+				@include opacity(1);
+				@include transition-property(all);
+				@include transition-duration(.5s);
+				@include transition-timing-function(ease-in-out);
+			}
+		}
+	}
 }

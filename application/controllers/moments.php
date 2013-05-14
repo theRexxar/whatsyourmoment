@@ -42,7 +42,7 @@ class Moments extends CI_Controller {
 		}
 		$this->load->view('moments', $data); //load the main.php file for view
 
-		$this->output->enable_profiler();
+		//$this->output->enable_profiler();
 	}
 	
 	
