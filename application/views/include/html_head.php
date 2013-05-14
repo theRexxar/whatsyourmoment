@@ -29,6 +29,3 @@
 </head>
 
 <body>
-
-  <div id="container">
-    <div class="wrapper">

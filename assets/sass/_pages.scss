@@ -70,6 +70,48 @@ p{
 	padding-bottom: 100px;
 }
 
+.moments{
+	padding-bottom: 0px;	
+
+	header{
+		position: fixed;
+		top: 0;
+		width: 100%;
+		background: #f2f0f0;
+		z-index: 10;
+	}
+
+	.left-icon{
+		margin-top: 0;
+		padding-top: 40px;
+		background : url(../images/icon-left-poss.png), url(../images/line-white.png);
+		background-position: 0px 50px, 5px 0;
+		background-repeat: no-repeat, repeat-y;
+	}
+
+	.content-detail{
+		margin-top: 230px;
+
+		h2{
+			font: normal 45px/130% $nexaLight;
+			color: #fff;
+			margin-top: 0px;
+		}
+
+		p{
+			color: #fff;
+		}
+
+		.love{background: #de6962}
+		.friendship{background: #7ec7d6}
+		.hobby{background: #d3cd7f}
+		.trends{background: #e991c5}
+		.work{background: #b8937d}
+		.family{background: #a3d183}
+		.etc{background: #eab67d}
+	}
+}
+
 .row{margin-top:40px}
 
 .text-left{text-align: left;}

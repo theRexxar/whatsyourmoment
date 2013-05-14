@@ -1,5 +1,4 @@
-  </div>
-</div>
+
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/libs/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/mylibs/kkcountdown.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/mylibs/jquery.validate.min.js"></script>
