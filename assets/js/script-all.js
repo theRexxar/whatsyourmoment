@@ -10,6 +10,9 @@ $(function(){
         displayZeroDays : false,
         callback	: function() {
         	$(".user, .countdown").fadeOut();
+            setTimeout(function(){
+                window.location = BASE_URL + "moments";
+            },500);
 		},
         oneDayClass	: 'one-day'
     });
@@ -108,6 +111,19 @@ $(function(){
         fixed: true,
         top: '10%'
     });
+
+    $(".group1").colorbox({
+        transition: 'fade',
+        rel:'group1',
+        fixed: true,
+        top: '0%',
+        width: '70%'
+    });
+
+    $(".image-popup").click(function(){
+        var data = $(this).siblings("img").attr("src");
+        $.colorbox({html:'<img src="'+ data +'">'});
+    })
 
     // $('#submit-quote').ajaxForm({ 
     //     beforeSubmit: function(arr, $form, options) { 

@@ -41,7 +41,7 @@
               <span class="minutes">MINUTE</span>
               <span class="second">SECOND</span>
             </div>
-            <span data-time="1368835200" class="count-down"></span>
+            <span data-time="1368723600" class="count-down"></span>
           </div>
         </div>
         <div class="columns ten">

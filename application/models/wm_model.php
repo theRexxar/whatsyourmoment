@@ -85,7 +85,6 @@ class Wm_model extends CI_Model {
 		->join('wm_user', 'wm_data.fb_id=wm_user.fb_id','left')
 		->where('wm_data.category', 'friendship')
 		->order_by('wm_data.date', 'ASC')
-		->limit(9)
 		->get();
 
 		if($data){
@@ -101,7 +100,6 @@ class Wm_model extends CI_Model {
 		->join('wm_user', 'wm_data.fb_id=wm_user.fb_id','left')
 		->where('wm_data.category', 'hobby')
 		->order_by('wm_data.date', 'ASC')
-		->limit(9)
 		->get();
 
 		if($data){
@@ -117,7 +115,6 @@ class Wm_model extends CI_Model {
 		->join('wm_user', 'wm_data.fb_id=wm_user.fb_id','left')
 		->where('wm_data.category', 'trends')
 		->order_by('wm_data.date', 'ASC')
-		->limit(9)
 		->get();
 
 		if($data){
@@ -133,7 +130,6 @@ class Wm_model extends CI_Model {
 		->join('wm_user', 'wm_data.fb_id=wm_user.fb_id','left')
 		->where('wm_data.category', 'work')
 		->order_by('wm_data.date', 'ASC')
-		->limit(9)
 		->get();
 
 		if($data){
@@ -149,7 +145,6 @@ class Wm_model extends CI_Model {
 		->join('wm_user', 'wm_data.fb_id=wm_user.fb_id','left')
 		->where('wm_data.category', 'family')
 		->order_by('wm_data.date', 'ASC')
-		->limit(9)
 		->get();
 
 		if($data){
@@ -165,7 +160,6 @@ class Wm_model extends CI_Model {
 		->join('wm_user', 'wm_data.fb_id=wm_user.fb_id','left')
 		->where('wm_data.category', 'etc')
 		->order_by('wm_data.date', 'ASC')
-		->limit(9)
 		->get();
 
 		if($data){

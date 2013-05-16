@@ -49,6 +49,9 @@
           <ul class="block-grid three-up">
             <?php foreach ($love as $key => $value) : ?>
               <li>
+                <figure>
+                  <a href="http://www.facebook.com/<?php echo $value["username"];?>" target="_blank" title="<?php echo $value["name"]; ?>"><img src="<?php echo 'http://graph.facebook.com/'.$value['username'].'/picture?type=square'; ?>" alt="<?php echo $value['name']; ?>"></a>
+                </figure>
                 <!-- QOUTE -->
                 <?php if($value['quote'] != NULL ) : ?>
                   <?php echo $value['quote']; ?>
@@ -58,7 +61,7 @@
                 <!-- PHOTO -->
                 <?php if($value['photo'] != NULL) :?>
                   <img src="<?php echo base_url()."uploads/".$value['photo']?>" alt="<?php echo $value['caption']; ?>">
-                  <span><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
+                  <span class="image-popup"><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
                 <?php endif; ?>
 
                 <!-- VIDEO -->
@@ -96,6 +99,9 @@
           <ul class="block-grid three-up">
             <?php foreach ($friendship as $key => $value) : ?>
               <li>
+                <figure>
+                  <a href="http://www.facebook.com/<?php echo $value["username"];?>" target="_blank" title="<?php echo $value["name"]; ?>"><img src="<?php echo 'http://graph.facebook.com/'.$value['username'].'/picture?type=square'; ?>" alt="<?php echo $value['name']; ?>"></a>
+                </figure>
                 <!-- QOUTE -->
                 <?php if($value['quote'] != NULL ) : ?>
                   <?php echo $value['quote']; ?>
@@ -105,7 +111,7 @@
                 <!-- PHOTO -->
                 <?php if($value['photo'] != NULL) :?>
                   <img src="<?php echo base_url()."uploads/".$value['photo']?>" alt="<?php echo $value['caption']; ?>">
-                  <span><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
+                  <span class="image-popup"><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
                 <?php endif; ?>
 
                 <!-- VIDEO -->
@@ -143,6 +149,9 @@
           <ul class="block-grid three-up">
             <?php foreach ($hobby as $key => $value) : ?>
               <li>
+                <figure>
+                  <a href="http://www.facebook.com/<?php echo $value["username"];?>" target="_blank" title="<?php echo $value["name"]; ?>"><img src="<?php echo 'http://graph.facebook.com/'.$value['username'].'/picture?type=square'; ?>" alt="<?php echo $value['name']; ?>"></a>
+                </figure>
                 <!-- QOUTE -->
                 <?php if($value['quote'] != NULL ) : ?>
                   <?php echo $value['quote']; ?>
@@ -152,7 +161,7 @@
                 <!-- PHOTO -->
                 <?php if($value['photo'] != NULL) :?>
                   <img src="<?php echo base_url()."uploads/".$value['photo']?>" alt="<?php echo $value['caption']; ?>">
-                  <span><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
+                  <span class="image-popup"><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
                 <?php endif; ?>
 
                 <!-- VIDEO -->
@@ -190,6 +199,9 @@
           <ul class="block-grid three-up">
             <?php foreach ($trends as $key => $value) : ?>
               <li>
+                <figure>
+                  <a href="http://www.facebook.com/<?php echo $value["username"];?>" target="_blank" title="<?php echo $value["name"]; ?>"><img src="<?php echo 'http://graph.facebook.com/'.$value['username'].'/picture?type=square'; ?>" alt="<?php echo $value['name']; ?>"></a>
+                </figure>
                 <!-- QOUTE -->
                 <?php if($value['quote'] != NULL ) : ?>
                   <?php echo $value['quote']; ?>
@@ -199,7 +211,7 @@
                 <!-- PHOTO -->
                 <?php if($value['photo'] != NULL) :?>
                   <img src="<?php echo base_url()."uploads/".$value['photo']?>" alt="<?php echo $value['caption']; ?>">
-                  <span><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
+                  <span class="image-popup"><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
                 <?php endif; ?>
 
                 <!-- VIDEO -->
@@ -238,6 +250,9 @@
           <ul class="block-grid three-up">
             <?php foreach ($work as $key => $value) : ?>
               <li>
+                <figure>
+                  <a href="http://www.facebook.com/<?php echo $value["username"];?>" target="_blank" title="<?php echo $value["name"]; ?>"><img src="<?php echo 'http://graph.facebook.com/'.$value['username'].'/picture?type=square'; ?>" alt="<?php echo $value['name']; ?>"></a>
+                </figure>
                 <!-- QOUTE -->
                 <?php if($value['quote'] != NULL ) : ?>
                   <?php echo $value['quote']; ?>
@@ -247,7 +262,7 @@
                 <!-- PHOTO -->
                 <?php if($value['photo'] != NULL) :?>
                   <img src="<?php echo base_url()."uploads/".$value['photo']?>" alt="<?php echo $value['caption']; ?>">
-                  <span><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
+                  <span class="image-popup"><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
                 <?php endif; ?>
 
                 <!-- VIDEO -->
@@ -285,6 +300,9 @@
           <ul class="block-grid three-up">
             <?php foreach ($family as $key => $value) : ?>
               <li>
+                <figure>
+                  <a href="http://www.facebook.com/<?php echo $value["username"];?>" target="_blank" title="<?php echo $value["name"]; ?>"><img src="<?php echo 'http://graph.facebook.com/'.$value['username'].'/picture?type=square'; ?>" alt="<?php echo $value['name']; ?>"></a>
+                </figure>
                 <!-- QOUTE -->
                 <?php if($value['quote'] != NULL ) : ?>
                   <?php echo $value['quote']; ?>
@@ -294,7 +312,7 @@
                 <!-- PHOTO -->
                 <?php if($value['photo'] != NULL) :?>
                   <img src="<?php echo base_url()."uploads/".$value['photo']?>" alt="<?php echo $value['caption']; ?>">
-                  <span><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
+                  <span class="image-popup"><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
                 <?php endif; ?>
 
                 <!-- VIDEO -->
@@ -332,6 +350,9 @@
           <ul class="block-grid three-up">
             <?php foreach ($etc as $key => $value) : ?>
               <li>
+                <figure>
+                  <a href="http://www.facebook.com/<?php echo $value["username"];?>" target="_blank" title="<?php echo $value["name"]; ?>"><img src="<?php echo 'http://graph.facebook.com/'.$value['username'].'/picture?type=square'; ?>" alt="<?php echo $value['name']; ?>"></a>
+                </figure>
                 <!-- QOUTE -->
                 <?php if($value['quote'] != NULL ) : ?>
                   <?php echo $value['quote']; ?>
@@ -341,7 +362,7 @@
                 <!-- PHOTO -->
                 <?php if($value['photo'] != NULL) :?>
                   <img src="<?php echo base_url()."uploads/".$value['photo']?>" alt="<?php echo $value['caption']; ?>">
-                  <span><?php echo $value['name']; ?> <br> <?php echo $value['caption']; ?></span>  
+                  <span class="image-popup"><?php echo $value['name']; ?> <br> <em><?php echo $value['caption']; ?></em></span>  
                 <?php endif; ?>
 
                 <!-- VIDEO -->
@@ -364,6 +385,33 @@
         </div>  
       </div>
     </div>
+
+    <div class="hpbd detail">
+      <div class="row left-icon">
+        <div class="columns sixteen">
+          <h2>The meaning of best moment on 17<sup>th</sup> May</h2>
+          <article>
+            <p>Is there a single word with the same meaning as ”best moments” today?  The only word the world should remember is the birth of you dear Ardelya Anggela! HAPPY BIRTHDAY!</p>
+          </article>
+        </div>
+
+        <div class="columns sixteen">
+          <ul class="block-grid five-up">
+            <li><a href="<?php echo base_url();?>uploads/1.JPG" rel="popup" class="group1" title="H"><img src="<?php echo base_url();?>uploads/1.JPG"></a></li>
+            <li><a href="<?php echo base_url();?>uploads/2.JPG" rel="popup" class="group1" title="A"><img src="<?php echo base_url();?>uploads/2.JPG"></a></li>
+            <li><a href="<?php echo base_url();?>uploads/3.JPG" rel="popup" class="group1" title="P"><img src="<?php echo base_url();?>uploads/3.JPG"></a></li>
+            <li><a href="<?php echo base_url();?>uploads/4.JPG" rel="popup" class="group1" title="P"><img src="<?php echo base_url();?>uploads/4.JPG"></a></li>
+            <li><a href="<?php echo base_url();?>uploads/5.JPG" rel="popup" class="group1" title="Y"><img src="<?php echo base_url();?>uploads/5.JPG"></a></li>
+          </ul>
+          <ul class="block-grid five-up">
+            <li><a href="<?php echo base_url();?>uploads/6.JPG" rel="popup" class="group1" title="B"><img src="<?php echo base_url();?>uploads/6.JPG"></a></li>
+            <li><a href="<?php echo base_url();?>uploads/7.JPG" rel="popup" class="group1" title="D'"><img src="<?php echo base_url();?>uploads/7.JPG"></a></li>
+            <li><a href="<?php echo base_url();?>uploads/8.JPG" rel="popup" class="group1" title="A"><img src="<?php echo base_url();?>uploads/8.JPG"></a></li>
+            <li><a href="<?php echo base_url();?>uploads/9.JPG" rel="popup" class="group1" title="Y"><img src="<?php echo base_url();?>uploads/9.JPG"></a></li>
+          </ul>
+      </div>
+    </div>
+
   </section>
 </div>
 
